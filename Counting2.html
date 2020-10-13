@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="https://blm-fsmvu.github.io/305/images/icon192.png">
+    <title>Inc-Cm</title>
+
+  <style> /* CSS comment */
+    body { max-width: 440px; }
+    #inp { width: 50px }
+    #out {
+        font-size: 18px;
+        background: blue;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+  </style>
+</head>
+
+<body>   <!-- HTML comment: Modify all items marked xxx -->
+
+<h2 id=title>This text is not shown. Why?</h2>
+<p>
+  <label>Inches</label>
+  <input id="inputInches" type="number" placeholder="Inches" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+</p>
+<p>cm: <span id="outputcm"></span></p>
+<td>
+  <p>
+    <label>cm</label>
+    <input id="inputFeet" type="number" placeholder="cm"
+    oninput="lengthConverter2(this.value)" onchange="lengthConverter2(this.value)">
+  </p>
+  <p>Inches: <span id="outputMeters2"></span></p>
+  </td>
+  
+<script>
+function LengthConverter(valNum) {
+  document.getElementById("outputcm").innerHTML=(valNum/0.39370).toFixed(2);
+}
+function lengthConverter2(valNum) {
+  document.getElementById("outputMeters2").innerHTML = (valNum * 0.39370).toFixed(2);
+}
+    title.innerText = document.title;
+    sample.innerText = increment.toString();
+    out.innerText = 0; increment();
+
+</script>
+</br>
+<p>Ref: <a href="https://www.w3schools.com/js/" 
+   target="NewTab">JS Tutorial</a>
+</p>
+
+<script>
+"use strict";
+// JavaScript comment
+function increment() {
+    let c = Number(out.innerText)+1
+    console.log("counter = "+c);
+    out.innerText = c;
+}
+    //global variable id is the HTML element with id 
+    //const title = document.getElementById("title");
+    title.innerText = document.title;
+    sample.innerText = increment.toString();
+    out.innerText = 0; increment();
+</script>
+
+</body>
+</html>
