@@ -4,6 +4,6 @@
 
 [CW2_2](https://atahanata.github.io/ileriprogramlama2021/cw2/Counting2)
 
-[CW3] (https://atahanata.github.io/ileriprogramlama2021/cw3/chap4.html)
+[CW3](https://atahanata.github.io/ileriprogramlama2021/cw3/chap4.html)
 
 # HomeWorks
