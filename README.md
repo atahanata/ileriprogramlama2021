@@ -10,7 +10,7 @@
 
 [CW4-Text to Objects](https://atahanata.github.io/ileriprogramlama2021/cw4/ObjectList.html)
 
-[CW5-Classes and Maps](https://atahanata.github.io/ileriprogramlama2021/cw5/)
+[CW5-Classes and Maps](https://atahanata.github.io/ileriprogramlama2021/cw5/Inspector.html)
 
 
 # HomeWorks
