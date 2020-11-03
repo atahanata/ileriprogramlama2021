@@ -12,6 +12,8 @@
 
 [CW5-Classes and Maps](https://atahanata.github.io/ileriprogramlama2021/cw5/Inspector.html)
 
+[CW6-Callback and Promise](https://atahanata.github.io/ileriprogramlama2021)
+
 
 # HomeWorks
 
