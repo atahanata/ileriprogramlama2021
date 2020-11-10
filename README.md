@@ -16,7 +16,7 @@
 
 [CW7-Student Database](https://atahanata.github.io/ileriprogramlama2021/cw7/Students.html)
 
-[CW8- File Operations](https://atahanata.github.io/ileriprogramlama2021/)
+[CW8- File Operations](https://atahanata.github.io/ileriprogramlama2021/cw8/cw8.html)
 
 [CW9- ---](https://atahanata.github.io/ileriprogramlama2021/)
 
