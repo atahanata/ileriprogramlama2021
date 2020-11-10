@@ -1,95 +1,54 @@
 <!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Remote and Local Files </title>
 
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-	<meta name="viewport" content="width=device-width">
-	<a href="https://blm-fsmvu.github.io/305/work/Reading_files" target="ExternalDocument">Reference</a>
-
-    <title>CW8 - File Operations </title>
-<script>
-"use strict";
-
-	let array = [];
-	let rmt;
-function dosyaSec(t) { 
-	array = []
-	var files = t.files;
-	for(let asd of files){
-		let reader = new FileReader();    
-
-	reader.onload = function(evt) { 
-         array.push([reader.result,asd.name])
-      };
-	  	reader.readAsText(asd);
-
-    console.log("Dosyaİsmi " + asd.name);
-	console.log(typeof files);
-	
-	
-	}
-
-}
-
-function urlYakala(){
- fetch(url.value)
-      .then(r =>  r.text()).then(result => rmt = result) 
-
-}
-
-function TextEslestir(){
-	
-	let str = "bütün dosyalar farklıdır.";
-	
-	for(let a of array){
-		if(a[0] == rmt){
-			console.log("vardır.");
-			str =  a[1] + "Aynı içeriğe sahip! ";
-		}
-	}
-	out.innerText = array.length + " dosya kontrol edildi " + str; 
-
-}
-
-
-
-</script><style>
-  .thumb {
-     width: 400px;
-     border: 1px solid #000;
-     margin: 10px 5px 0 0;
-  }
-</style></head>
-
-
-
-
+    <style>
+        body { max-width: 500px; }
+    </style>
+</head>
 
 <body>
-<h2 id="title">Local dosya okuma</h2>
-
-<input type="file" id="button" onchange="dosyaSec(this)" multiple="multiple">
-<p>
-<input type=text id=url value="https://atahanata.github.io/ileriprogramlama2021/cw7/Students.html">
-<input type=button value="uzaktanGetir" onClick="urlYakala()">
-<input type=button value="eslestir" onClick="TextEslestir()">
-
-<output id="msg">dosya seciniz </output>
-<output id="out"></output>
+<p><b id=docName></b> &nbsp; <a href="Reading_files">Reference</a>
 </p>
-
-<hr>
+<p>Remote file <br>
+  <input type=text id=remote size=45 
+  value="https://atahanata.github.io/ileriprogramlama2021/cw7/Students.html">
+</p>
+<p><input type=file id=local multiple onChange='fileSelect()' /></p>  
+<pre id=out></pre>
+<hr />
 <b>Sample code</b>
-<pre id="sample" style="overflow-x:auto">function dosyaSec(t) { //target is the button<br>    console.assert(t == button);<br>    const f = t.files[0];<br>    const size = " "+f.size+" bytes ";<br>    msg.innerText = f.type+size;<br>    if (f.type.startsWith("image")) {<br>        reader.onload = function(evt) {<br>            const a = evt.target.result; //image source<br>            out.innerHTML = "&lt;img class=thumb "<br>                +"src='"+a+"' title='"+f.name+"' /&gt;";<br>            console.log(f.name+size+f.type);<br>        };<br>        reader.readAsDataURL(f);<br>    } else if (isText(f)) {<br>        reader.onload = function(evt) { //text<br>            const a = evt.target.result.replace(/&lt;/g, "&amp;lt;");<br>            out.innerHTML = "&lt;pre&gt;"+a+"&lt;/pre&gt;";<br>            console.log(f.name+size+f.type);<br>        };<br>        reader.readAsText(f);<br>    } else {<br>        msg.innerText += "Unknown ";<br>        out.innerText = "";<br>    }<br>}</pre>
-
-
+<pre id=sample></pre>
 
 <script>
-    title.innerText = document.title;
-    sample.innerText = dosyaSec.toString();
+"use strict";
+function fileSelect() {
+    fetch(remote.value).then(r => r.blob()).then(checkFiles)
+}
+function checkFiles(b) {
+    let a = [...local.files]  //convert to Array
+    out.innerText = a.map(f => f.name+' '+f.type).join('\n')
+	let m1 = a.length+' items checked, '
+	let m2 = 'all files are different'
+    let isDiffrent = true;
+    let fileName = "";
+    for (let f of a) //each local file
+        if (f.size==b.size && f.type==b.type) {
+            isDiffrent = false;
+            fileName = f.name;
+            m2 = f.name+' is the same'; break
+    }
+    out.innerText +=  '\n\n'+m1+ (isDiffrent ? 'all files are different':fileName+' is the same');
+}
+
+
+
+const L = console.log
+docName.innerText = document.title
+sample.innerText = fileSelect+"\n"+checkFiles
 </script>
-
-
-
 </body>
-
 </html>
