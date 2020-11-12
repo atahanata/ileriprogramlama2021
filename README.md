@@ -18,7 +18,7 @@
 
 [CW8- File Operations](https://atahanata.github.io/ileriprogramlama2021/cw8/cw8.html)
 
-[CW9- Page made by JS](https://atahanata.github.io/ileriprogramlama2021/)
+[CW9- Page made by JS](https://atahanata.github.io/ileriprogramlama2021/cw9/countingCw9.html)
 
 [CW10- ---](https://atahanata.github.io/ileriprogramlama2021/)
 
