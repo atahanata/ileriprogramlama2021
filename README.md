@@ -29,4 +29,4 @@
 
 [HW2-Database](https://atahanata.github.io/ileriprogramlama2021/)
 
-# Projects
+# Project
