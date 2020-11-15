@@ -27,6 +27,6 @@
 
 [HW1-Poisson Table](https://atahanata.github.io/ileriprogramlama2021/HW1/HW1.html)
 
-[HW2-Database]("it will be here soon.")
+[HW2-Database](https://atahanata.github.io/ileriprogramlama2021/)
 
 # Projects
