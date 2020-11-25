@@ -35,4 +35,4 @@
 
 # Project
 
-[Term Project- ---(https://atahanata.github.io/ileriprogramlama2021/)
+[Term Project- ---](https://atahanata.github.io/ileriprogramlama2021/)
