@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>cw11-Event Listener </title>
+
+  <style> /* CSS comment */
+    body { max-width: 440px; }
+    #url { width: 190px; }
+    span, #url { color: blue; }
+  </style>
+</head>
+
+<body>   <!-- HTML comment: Modify all items marked xxx -->
+
+<h2 id=title title="Modify xxx"></h2>
+
+<h2>Battery Status</h2>
+<div id="level">(battery level unknown)</div>
+<div id="chargingTime">(charging time unknown)</div>
+<div id="isCharging">charging status</div>
+<hr />
+
+
+<h2>Network Status</h2>
+<div id="isStatus">network status</div>
+<hr />
+<h2>Keyboard</h2>
+<p id="keyboard">press a key</p>
+<hr />
+
+<b>Sample code</b>
+<pre id=sample></pre>
+
+<hr />
+
+<script>
+"use strict";
+// JavaScript comment
+navigator.getBattery().then(function(battery) {
+    if (battery.charging) {
+        isCharging.textContent="Bilgisayarınız Şarj Oluyor..."
+    } else {
+        isCharging.textContent="Bilgisayarınızın Pili Azalıyor..."
+    }
+});
+navigator.getBattery().then(function(battery) {
+
+   battery.onchargingchange = chargingChange();
+
+   function chargingChange() {
+      document.querySelector('#level').textContent = "Sarj %"+battery.level*100;
+      document.querySelector('#chargingTime').textContent ="Sarj Süresi: "+ battery.chargingTime;
+   }
+});
+if (navigator.onLine) {
+  isStatus.textContent="onLine"
+} else {
+  isStatus.textContent="offLine"
+}
+document.body.addEventListener('keyup', function(event) {
+  keyboard.textContent="basılan tuş: "+event.key
+});
+
+sample.innerText = ""
+</script>
+
+</body>
+</html>
