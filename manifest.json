@@ -4,18 +4,12 @@
   "description": "Advanced Programming Files",
   "start_url": "/ileriprogramlama2021/index.html",
   "display": "standalone",
-  "background_color": "navy",
-  "theme_color": "navy",
-
+  "background_color": "cyan",
   "icons": [
     {
-      "src": "JS.png",
+      "src": "/JS.png",
       "sizes": "192x192",
       "type": "image/png"
-    }, {
-      "src": "JS-Icon",
-      "sizes": "512x512",
-      "type": "image/jpg"
     }
   ]
 }
