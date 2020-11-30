@@ -1,5 +1,5 @@
 const CACHE ='ileriprogramlama2021'
-const FILES = ['/ileriprogramlama2021/', '/ileriprogramlama2021/index.html', ...]
+const FILES = ['/JS/', '/JS/sss/', '/JS/index.html', ...]
 function installCB(e) {
   e.waitUntil(
     caches.open(CACHE)
