@@ -9,16 +9,11 @@
     <link rel="manifest" href="manifest.json">
     <link rel="shortcut icon" href="JS.png">
     <link rel="icon" sizes="192x192" href="JS.png">
-
-	<title>İleri Programlama</title>
-<script type="text/javascript">
-	if ('serviceWorker' in navigator) {
-          navigator.serviceWorker
-            .register('sw.js')
-            .then((reg) => { console.log('SW Registered', reg) })
-            .catch(console.log)
-        }
-</script>
+    <title>İleri Programlama</title>
+  
+  <script>
+    navigator.serviceWorker.register('sw.js')
+  </script>
 </head>
 <body>
 	
