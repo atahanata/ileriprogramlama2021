@@ -1,4 +1,4 @@
-[Repository](/ileriprogramlama2021)
+[Repository](/)
 
 # ClassWorks
 
