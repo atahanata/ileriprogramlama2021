@@ -1,4 +1,4 @@
-[Repository](github.com/atahanata/ileriprogramlama2021)
+[Repository](/ileriprogramlama2021)
 
 # ClassWorks
 
