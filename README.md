@@ -1,4 +1,4 @@
-<link rel="icon" sizes="192x192" href="images/JS.png">
+<link rel="icon" sizes="192x192" href="JS.png">
 <link rel="manifest" href="manifest.json">
 
 [Repository](https://github.com/atahanata/ileriprogramlama2021/)
