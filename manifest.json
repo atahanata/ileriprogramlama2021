@@ -4,6 +4,7 @@
   "description": "Advanced Programming Files",
   "start_url": "/ileriprogramlama2021/index.html",
   "display": "standalone",
+  "theme_color": "#457cdb",
   "background_color": "cyan",
     "icons": [
         {
