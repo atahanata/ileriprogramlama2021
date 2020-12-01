@@ -1,37 +1,34 @@
-const CACHE ='ileriprogramlama2021'
-const FILES = ['/JS/', '/JS/sss/', '/JS/index.html', ...]
-function installCB(e) {
-  e.waitUntil(
-    caches.open(CACHE)
-    .then(cache => cache.addAll(FILES))
-    .catch(console.log)
-  )
-}
-self.addEventListener('install', installCB)
 
-function cacheCB(e) { //cache first
-  let req = e.request
-  e.respondWith(
-    caches.match(req)
-    .then(r1 => r1 || fetch(req))
-    .catch(console.log)
-  )
+const CACHE ='AP'
+function installCB(e) {
+  console.log(CACHE, e);
 }
-self.addEventListener('fetch', cacheCB)
-               
+addEventListener('install', installCB)
+
 function save(req, resp) {
+  if (!req.url.includes("github")) 
+     return resp;
   return caches.open(CACHE)
-  .then(cache => {
+  .then(cache => { // save request
     cache.put(req, resp.clone());
     return resp;
   }) 
-  .catch(console.log)
+  .catch(console.err)
+}
+function report(req) {
+  console.log(CACHE+' matches '+req.url)
+  return req
 }
 function fetchCB(e) { //fetch first
   let req = e.request
   e.respondWith(
     fetch(req).then(r2 => save(req, r2))
-    .catch(() => { return caches.match(req).then(r1 => r1) })
+    .catch(() => caches.match(req).then(report))
   )
 }
-self.addEventListener('fetch', fetchCB)
+addEventListener('fetch', fetchCB)
+
+function activateCB(e) {
+  console.log(CACHE, e);
+}
+addEventListener('activate', activateCB);
