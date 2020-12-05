@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+    #train {
+      position: relative;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+<p style="text-align: center">
+  <img id="train" src="https://js.cx/clipart/train.gif">
+</p>
+
+  <script>
+    train.onclick = function() {
+  let angle = Math.PI /2;
+  function animate(time, lastTime) {
+    if (lastTime != null) {
+      angle += (time - lastTime) * 0.001;
+    }
+    train.style.top= (Math.sin(angle) * 20) + "px";
+    train.style.left = (Math.cos(angle) * 500) + "px";
+    requestAnimationFrame(newTime => animate(newTime, time));
+  }
+  requestAnimationFrame(animate);
+    }
+  </script>
+
+
+</body>
+
+</html>
