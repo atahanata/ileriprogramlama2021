@@ -34,7 +34,7 @@
 
 # HomeWorks
 
-[HW3-Animation](https://atahanata.github.io/ileriprogramlama2021/animation/AtahanTrain.html)
+[HW3-Animation](https://atahanata.github.io/305/anim/Animation)
 
 [HW2-Database](https://atahanata.github.io/ileriprogramlama2021/HW2/Students.html)
 
