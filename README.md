@@ -5,6 +5,9 @@
 
 # ClassWorks
 
+[CW15- Write to the Cloud](https://atahanata.github.io/ileriprogramlama2021/)
+
+[CW14- OpenStreetMap](https://atahanata.github.io/ileriprogramlama2021/cw14/cw14.html)
 
 [CW13- Open Weather](https://atahanata.github.io/ileriprogramlama2021/cw13/cw13.html)
 
