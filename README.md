@@ -47,4 +47,4 @@
 
 # Project
 
-[Term Project- ---](https://atahanata.github.io/ileriprogramlama2021/)
+[Term Project- To Do List](https://atahanata.github.io/ileriprogramlama2021/termProject/index.html)
